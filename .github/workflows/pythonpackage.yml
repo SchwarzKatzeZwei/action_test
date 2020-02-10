@@ -2,7 +2,7 @@ name: Python package
 
 on:
   push:
-    branches: 
+    branches:
       - feature/*
 
 jobs:
@@ -32,5 +32,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
+        export PYTHONPATH=${PYTHONPATH}:${GITHUB_WORKSPACE}
+        echo ${GITHUB_WORKSPACE}
+        echo ${PYTHONPATH}
         pip install pytest
         pytest
