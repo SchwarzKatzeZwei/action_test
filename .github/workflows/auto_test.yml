@@ -1,9 +1,20 @@
-name: Python package
+name: auto_test
 
 on:
-  push:
-    branches:
-      - feature/*
+  pull_request:
+    branches: master
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+  pull_request_review:
+    types:
+      - submitted
 
 jobs:
   build:
@@ -37,3 +48,7 @@ jobs:
         echo ${PYTHONPATH}
         pip install pytest
         pytest
+    - name: automerge
+      uses: "pascalgn/automerge-action@ecb16453ce68e85b1e23596c8caa7e7499698a84"
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
