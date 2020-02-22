@@ -3,7 +3,7 @@ name: auto_test
 on:
   pull_request:
     branches: [master, develop]
-    types: []
+    types:
       - labeled
       - unlabeled
       - synchronize
