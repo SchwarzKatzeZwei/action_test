@@ -49,7 +49,7 @@ jobs:
     - name: Test with pytest
       run: |
         export PYTHONPATH=${PYTHONPATH}:${GITHUB_WORKSPACE}
-        pytest
+        pytest tests
     - name: automerge
       uses: "pascalgn/automerge-action@ecb16453ce68e85b1e23596c8caa7e7499698a84"
       env:
