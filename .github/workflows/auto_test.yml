@@ -4,14 +4,14 @@ on:
   pull_request:
     branches: [master, develop]
     types:
-      - labeled
-      - unlabeled
-      - synchronize
+    #   - labeled
+    #   - unlabeled
+    #   - synchronize
       - opened
       - edited
-      - ready_for_review
-      - reopened
-      - unlocked
+    #   - ready_for_review
+    #   - reopened
+    #   - unlocked
   pull_request_review:
     types:
       - submitted
