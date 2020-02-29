@@ -2,3 +2,5 @@
 Git Action Test
 
 スカッシュ
+
+スカッシュ②
