@@ -1,0 +1,14 @@
+
+# ===== Subject =====
+:type #{issueNumber} subject
+
+# ===== Type =====
+Fix:     バグ修正
+Hotfix:  クリティカルなバグ修正
+Add:     新規（ファイル）機能追加
+Update:  機能修正（バグではない）
+Change:  仕様変更
+Clean:   整理（リファクタリング等）
+Remove:  削除（ファイル）
+Upgrade: バージョンアップ
+Docs:    ドキュメント修正
